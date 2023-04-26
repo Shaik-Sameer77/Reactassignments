@@ -1,0 +1,26 @@
+/* Counter.css */
+
+.counter-container {
+    text-align: center;
+  }
+  
+  p#count {
+    font-size: 64px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-size: 24px;
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
