@@ -1,0 +1,15 @@
+.heading {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff5900;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .heading {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+  

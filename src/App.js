@@ -1,27 +1,15 @@
-import React, { useState } from "react";
-import Counter from "./component/Counter";
-import "./App.css";
+import React, { useState } from 'react';
+import Heading from './component/Heading';
+import NameForm from './component/NameForm';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  function handleIncrement() {
-    setCount(count + 1);
-  }
-
-  function handleDecrement() {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  }
+  const [name, setName] = useState('****');
 
   return (
-    <div className="app-container">
-      <Counter
-        count={count}
-        onIncrement={handleIncrement}
-        onDecrement={handleDecrement}
-      />
+    <div className="container">
+      <Heading name={name} />
+      <NameForm setName={setName} />
     </div>
   );
 }

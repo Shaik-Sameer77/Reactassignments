@@ -1,9 +1,15 @@
-
-/* App.css */
-
-.app-container {
+.container {
+  background-color: aqua;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: auto;
+    padding: 2rem;
+  }
 }
