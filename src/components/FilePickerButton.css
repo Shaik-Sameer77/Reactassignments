@@ -1,0 +1,25 @@
+.file-picker-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .file-picker-button button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0077cc;
+    color: rgb(251, 251, 251);
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .file-picker-button input[type="file"] {
+    display: none;
+  }
+
+  button:hover {
+    background-color: #0066b3;
+  }
+  
+  
