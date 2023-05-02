@@ -1,26 +1,36 @@
+import React,{ useState } from 'react';
 import './App.css';
-import logo from './logo.svg';
-
 
 function App() {
+
+  const [image , setImage] = useState(getDog)
+
+  async function getDog () {
+
+    try{
+        
+        const response = await fetch('https://dog.ceo/api/breeds/image/random')
+        const data = await response.json()
+        setImage(data.message)
+    }
+    catch(error){
+      console.log('i am from catch' ,error)
+    }
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button>Get started...</button>
-        </a>
-      </header>
+       <h1>Dog Images</h1>
+      <img 
+        src={image}
+        alt='dog image'
+      />
+
+
     </div>
   );
 }
 
 export default App;
+
+
